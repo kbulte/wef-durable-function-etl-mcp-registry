@@ -1,0 +1,9 @@
+{
+  "profiles": {
+    "Durable_function_etl_mcp_registry": {
+      "commandName": "Project",
+      "commandLineArgs": "--port 7199",
+      "launchBrowser": false
+    }
+  }
+}

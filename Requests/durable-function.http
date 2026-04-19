@@ -1,0 +1,3 @@
+###Start the MCP Registry ETL Orchestrator Durable Function via the HTTP trigger
+GET http://localhost:7071/api/McpRegistryEtlOrchestrator_HttpStart HTTP/1.1
+content-type: application/json

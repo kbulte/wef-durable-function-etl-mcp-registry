@@ -1,0 +1,16 @@
+### Fetch the first 10 MCP servers directly from the official registry
+GET https://registry.modelcontextprotocol.io/v0.1/servers?limit=10 HTTP/1.1
+content-type: application/json
+
+### Search for the Stack Overflow MCP server by name
+GET https://registry.modelcontextprotocol.io/v0.1/servers?search=StackOverflow HTTP/1.1
+content-type: application/json
+
+### Fetch all versions for the Stack Overflow MCP server make sure the server name is URL encoded for the '/' character
+GET https://registry.modelcontextprotocol.io/v0.1/servers/com.stackoverflow.mcp%2Fmcp/versions HTTP/1.1
+content-type: application/json
+
+### Fetch only version 1.1.2. for the Stack Overflow MCP server
+GET https://registry.modelcontextprotocol.io/v0.1/servers/com.stackoverflow.mcp%2Fmcp/versions/1.1.2 HTTP/1.1
+content-type: application/json
+

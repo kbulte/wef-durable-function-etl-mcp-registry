@@ -1,6 +1,6 @@
 # Durable Function ETL from official opensource MCP Registry to downstream Registry 
 
-![MCP registry project vision](assets/project-vision.png)
+![MCP registry project vision](Assets/project-vision.png)
 
 This project follows the vision of the Model Context Protocol registry project. It uses an ETL process created with an durable Azure function to pull MCP server metadata from the upstream registry to a custom subregistry. Using the published V1.0 OpenApi definition of the official MCP registry a curated list is saved in an Azure Cosmos DB, which s used as a custom downstream registry. This ETL process is created with a durable function to extract, transform and load:
 1. Fetch MCP server data from the official opensource upstream MCP registry.
@@ -56,7 +56,8 @@ Set these app settings locally in `local.settings.json` and in Azure Function Ap
 **Start Azurite** 
 
 a) From the command palette:
-![Start Azurite from the command palette](assets/start-azurite.png)
+
+![Start Azurite from the command palette](Assets/start-azurite.png)
 
 b) From the project root:
 
@@ -81,7 +82,7 @@ docker run -d -p 8082:8082 -p 8080:8080 mcr.microsoft.com/dts/dts-emulator:lates
 
 The dashboard will be available at http://localhost:8082
 
-![Dashboard](assets/dts-dashboard.png)
+![Dashboard](Assets/dts-dashboard.png)
 
 ### 3) Azure Cosmos DB Emulator (for local Cosmos access) 
 
@@ -96,11 +97,11 @@ Start-Process "$env:ProgramFiles\Azure Cosmos DB Emulator\CosmosDB.Emulator.exe"
 
 The emulator defaults to the endpoint `https://localhost:8081`
 
-![Cosmos DB emulator](assets/cosmosdb-emulator.png)
+![Cosmos DB emulator](Assets/cosmosdb-emulator.png)
 
 Add a container and database that match the 'COSMOS_DB_*' appsettings.
 
-![Cosmos DB container and database](assets/cosmosdb-resources.png)
+![Cosmos DB container and database](Assets/cosmosdb-resources.png)
 
 ### 4) Run the durable function
 
@@ -128,11 +129,11 @@ Recommended options (from simplest to most robust):
 
 ## Example screens
 
-![Durable function console output](assets/console-output.png)
+![Durable function console output](Assets/console-output.png)
 
-![Durable Task Scheduler orchestration overview](assets/dts-orchestration-overview.png)
+![Durable Task Scheduler orchestration overview](Assets/dts-orchestration-overview.png)
 
-![Durable Task Scheduler orchestration detail](assets/dts-orchestration-detail.png)
+![Durable Task Scheduler orchestration detail](Assets/dts-orchestration-detail.png)
 
 ## Resources
 - Azure durable task scheduler: https://learn.microsoft.com/en-us/azure/durable-task/
